@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="D:/SCHOOL'S/12/Produktif/Basis-data/Tugas-10-BasisData2/dbtoko2.db" readonly="0" foreign_keys="" case_sensitive_like="" temp_store="" wal_autocheckpoint="" synchronous=""/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2599"/><column_width id="4" width="0"/></tab_structure><tab_browse><current_table name="0,0:"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">CREATE VIEW vdetail AS SELECT
+
+tbldetailtransaksi.hargajual,
+tbldetailtransaksi.idbarang,
+tbldetailtransaksi.nomertransaksi,
+tbldetailtransaksi.quantity,
+tbldetailtransaksi.total,
+tblbarang.barang,
+tblbarang.harga,
+tblbarang.idbarang,
+tbltransaksi.tanggaltransaksi,
+tbltransaksi.totalsemua
+
+FROM
+tbldetailtransaksi
+
+INNER JOIN
+tblbarang
+ON tbldetailtransaksi.idbarang = tblbarang.idbarang
+
+INNER JOIN
+tbltransaksi
+ON tbldetailtransaksi.nomertransaksi = tbltransaksi.nomertransaksi</sql><sql name="Edit View vdetail">DROP VIEW &quot;main&quot;.&quot;vdetail&quot;;
+CREATE VIEW vdetail AS SELECT
+
+tbldetailtransaksi.hargajual,
+tbldetailtransaksi.idbarang,
+tbldetailtransaksi.nomertransaksi,
+tbldetailtransaksi.quantity,
+tbldetailtransaksi.total,
+tblbarang.barang,
+tblbarang.harga,
+tbltransaksi.tanggaltransaksi,
+tbltransaksi.totalsemua
+
+FROM
+tbldetailtransaksi
+
+INNER JOIN
+tblbarang
+ON tbldetailtransaksi.idbarang = tblbarang.idbarang
+
+INNER JOIN
+tbltransaksi
+ON tbldetailtransaksi.nomertransaksi = tbltransaksi.nomertransaksi</sql><current_tab id="1"/></tab_sql></sqlb_project>
